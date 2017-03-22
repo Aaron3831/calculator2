@@ -1,3 +1,4 @@
+
 var add = function(number1, number2) {
   return number1 + number2;
 };
@@ -14,10 +15,10 @@ var divide = function(number1, number2) {
   return number1 / number2;
 };
 
-var number1 = parseInt(prompt("Enter first number please"));
+// Everything below this line is user interface (or front-end) logic:
 
-var number2 = parseInt(prompt("Enter second number please"));
-
-var result = add(number1, number2);
-
-console.log(result);
+$(document).ready(function() {
+  var number1 = parseInt($("#add1").val());
+  var number2 = parseInt($("#add2").val());
+  alert(add(number1, number2));
+});
